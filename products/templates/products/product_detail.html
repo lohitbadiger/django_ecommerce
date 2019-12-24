@@ -1,0 +1,42 @@
+{% extends 'products/base.html' %}
+
+
+{% block content %}
+
+
+<div class="container my-5">
+
+	
+<div class="card border-0">
+	<div class="row">
+		<aside class="col-sm-6  mt-5">
+<article class="gallery-wrap"> 
+<div class="img-big-wrap">
+  <div> <a href="#"><img src="/media/{{ object.mainimage }}" style="width: 400px"></a></div>
+</div> <!-- slider-product.// -->
+</article> <!-- gallery-wrap .end// -->
+		</aside>
+		<aside class="col-sm-0 col-md-5 mt-5">
+<article class="card-body p-5">
+	<h3 class="title mb-1">{{ object.name }}</h3>
+<p class="price-detail-wrap"> 
+	<span class="price h3 text-warning"> 
+		<span class="currency">US $</span><span class="num">{{ object.price }}</span>
+	</span> 
+	
+</p> <!-- price-detail-wrap .// -->
+<dl class="item-property">
+  <dt>Description</dt>
+  <dd><p>{{ object.preview_text }}</p></dd>
+</dl>
+
+	<a href="{% url 'mainapp:cart' object.slug %}" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+</article> <!-- card-body.// -->
+		</aside> <!-- col.// -->
+	</div> <!-- row.// -->
+</div> <!-- card.// -->
+
+
+</div>
+<!--container.//-->
+{% endblock %}

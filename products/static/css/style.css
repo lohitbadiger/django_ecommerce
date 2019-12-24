@@ -1,0 +1,39 @@
+.img {
+    width: 200px; /* You can set the dimensions to whatever you want */
+    height: 200px;
+    object-fit: fill;
+    border-radius:10px ;
+}
+
+
+.heartBeat {
+    animation-duration:10s;
+    animation-delay: 2s;
+    animation-iteration-count: 1; 
+  }
+
+  body{
+      background-color: rgb(255, 255, 255);
+      
+  }
+
+ 
+  .heartBeat:hover{
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+  }
+  .animated{
+    position: relative;
+    text-align: center;
+    top:-40px;
+    left:6.3em; 
+    width: 10px;
+    height: 20px;
+  }
+
+  li:hover{
+background-image:url('https://images.pexels.com/photos/1109195/pexels-photo-1109195.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+
+border-radius: 10px;
+  }

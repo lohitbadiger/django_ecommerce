@@ -1,0 +1,40 @@
+
+{% extends 'products/base.html' %}
+
+{% block content %}
+<br>
+
+  <div class="container">
+      <div class="row">
+      {% for product in product_list %}
+      
+        <div class="col-md-4">
+      <div class="card border-0">
+        <div class="card-body">
+          <a href="product/{{ product.slug }}"> 
+
+            <img class="card-img img " src="media/{{product.mainimage}}" alt="Card image" style="width:100%">
+            <h4 class="card-title text-info mt-2">{{product.name | upper}}</h4>
+          </a>
+            <p class="card-text ">{{product.preview_text}}</p>
+            <p class="card-text text-warning">Price is ₹{{product.price}}</p>
+            <a href="cart/{{ product.slug }}" class="btn btn-success btn-sm">Add to Cart</a>
+
+            <a href="remove/{{ product.slug }}" class="ml-3 btn btn-danger btn-sm">Remove from Cart</a>
+
+
+            <h1 class="animated hover animated heartBeat">
+              <img  src="https://img.icons8.com/cute-clipart/64/000000/percentage.png">
+              
+            </h1>
+         
+           
+        </div>
+    </div>
+    <br>
+</div>     
+
+    {%endfor%}
+</div>
+
+{% endblock %}
