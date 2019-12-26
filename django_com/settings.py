@@ -139,5 +139,5 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
 
-STRIPE_SECRET_KEY = 'sk_test_kAI5HVcgvtUi6pKazYDAzMnK'
+STRIPE_SECRET_KEY = 'add your secrect key'
 STRIPE_PUBLISHABLE_KEY = 'pk_test_5AUyAZBL3n6GFm5nGUotPbbx'
