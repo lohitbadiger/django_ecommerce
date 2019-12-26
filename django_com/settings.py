@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-nm5h&voczg0e$jv5$c#dj97pd_r8)c4pz3^5t#$mp#%^+iwe('
+SECRET_KEY = '-nm5h&voczg0e₹jv5₹c#dj97pd_r8)c4pz3^5t#₹mp#%^+iwe('
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cart',
-    'products'
-]
+    'products',
+    'checkout',
+    'crispy_forms',
 
+]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -135,3 +138,6 @@ STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+
+STRIPE_SECRET_KEY = 'sk_test_kAI5HVcgvtUi6pKazYDAzMnK'
+STRIPE_PUBLISHABLE_KEY = 'pk_test_5AUyAZBL3n6GFm5nGUotPbbx'
